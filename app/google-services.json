@@ -1,1 +1,29 @@
-
+{
+  "project_info": {
+    "project_number": "622104139221",
+    "project_id": "my-app-e7f8c",
+    "storage_bucket": "my-app-e7f8c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:622104139221:android:a36b9b5b26d9e47cacd95c",
+        "android_client_info": {
+          "package_name": "com.testex.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAm1ylv5H4McTNvOut_0UdgiAFdxBBumI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
