@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    // id("com.google.gms.google-services")  // ← aktifkan nanti setelah ada google-services.json
+    id("com.google.gms.google-services")   // ← dari Firebase
 }
 
 android {
@@ -45,7 +45,11 @@ android {
 }
 
 dependencies {
-    // Compose BOM
+    // ===== Firebase =====
+    implementation(platform("com.google.firebase:firebase-bom:35.0.1"))
+    implementation("com.google.firebase:firebase-analytics")
+
+    // ===== Compose =====
     implementation(platform("androidx.compose:compose-bom:2024.09.03"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
@@ -56,17 +60,17 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.6")
     implementation("androidx.core:core-ktx:1.13.1")
 
-    // Coroutines
+    // ===== Coroutines =====
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
-    // Gson (untuk simpan session)
+    // ===== Gson =====
     implementation("com.google.code.gson:gson:2.11.0")
 
-    // Coil (load gambar avatar)
+    // ===== Coil =====
     implementation("io.coil-kt:coil-compose:2.7.0")
 
-    // ⚠️ Credential Manager & Google ID — AKTIFKAN NANTI kalau mau login Google
-    // implementation("androidx.credentials:credentials:1.3.0")
-    // implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
-    // implementation("com.google.android.libraries.identity.googleid:googleid:1.1.0")
+    // ===== Google Login =====
+    implementation("androidx.credentials:credentials:1.3.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.0")
 }
